@@ -22,16 +22,16 @@ namespace Chapter_5_and_6_Example
         {
             //This section shows the use of "if", "else", and "if then else" statements
             //////////////////////////////////////////////////////////////////////////////////////////////////
-            int iNumber;
+            int integer;
 
             //Extract the number from the textbox
-            iNumber = Convert.ToInt32(txtMyTextbox.Text);
+            integer = Convert.ToInt32(txtMyTextbox.Text);
 
-            if (iNumber > 5)
+            if (integer > 5)
             {
                 label1.Text = "Number is greater than 5";
             }
-            else if (iNumber < 5)
+            else if (integer < 5)
             {
                 label1.Text = "Number is less than 5";
             }
@@ -45,17 +45,17 @@ namespace Chapter_5_and_6_Example
 
             //This section shows the use of the "while" loop
             //////////////////////////////////////////////////////////////////////////////////////////////////
-            int iCounter = 0;
+            int counter = 0;
 
             //This will loop until this condition is false
-            while (iCounter < 10)
+            while (counter < 10)
             {
 
                 //This line prints the loop variable and a newline character
-                richTextBox1.Text += iCounter.ToString() + Environment.NewLine;
+                richTextBox1.Text += counter.ToString() + Environment.NewLine;
 
                 //We need to increment the variable
-                iCounter++;
+                counter++;
 
                 //These statements just show the use of the increment and decrement operators
                 //iCounter = iCounter + 1;
@@ -85,6 +85,13 @@ namespace Chapter_5_and_6_Example
             richTextBox1.Text += String.Format("{0:f}", 23.347636);
             richTextBox1.Text += Environment.NewLine;
             richTextBox1.Text += String.Format("{0:f3}", 23.347636);
+            richTextBox1.Text += Environment.NewLine;
+            //Same as above but with string interpolation
+            richTextBox1.Text += $"{23.34:c}";
+            richTextBox1.Text += Environment.NewLine;
+            richTextBox1.Text += $"{23.347636:f}";
+            richTextBox1.Text += Environment.NewLine;
+            richTextBox1.Text += $"{23.347636:f3}";
             //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -119,10 +126,11 @@ namespace Chapter_5_and_6_Example
 
             for (int i = 1; i < 7; i++)
             {
-                pbImage.Image = Image.FromFile("die" + i.ToString() + ".gif");
+                pbImage.Image = (Image) (Properties.Resources.ResourceManager.GetObject($"die{i}"));
                 pbImage.Refresh();
                 Thread.Sleep(300);
             }
+
         }
     }
 }

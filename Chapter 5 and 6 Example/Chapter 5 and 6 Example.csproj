@@ -80,6 +80,24 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die6.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
